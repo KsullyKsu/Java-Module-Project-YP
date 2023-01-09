@@ -30,9 +30,7 @@ public class Main {
         amount = scroll.getAmount();
         bill = amount / friend;
 
-        double x = bill;
-        int y = (int) x;
-        int z = y % 100;
+        int z = ((int) bill) % 100;
         if (z >= 11 && z <= 14) {
             rub = String.format("%d", z);
             switch (rub) {
@@ -44,7 +42,7 @@ public class Main {
                     break;
             }
         } else{
-            z = y % 10;
+            z = ((int) bill) % 10;
             rub = String.format("%d", z);
             switch (rub) {
                 case "0":
