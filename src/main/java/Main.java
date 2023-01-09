@@ -45,14 +45,6 @@ public class Main {
             z = ((int) bill) % 10;
             rub = String.format("%d", z);
             switch (rub) {
-                case "0":
-                case "5":
-                case "6":
-                case "7":
-                case "8":
-                case "9":
-                    rub = "рублей";
-                    break;
                 case "1":
                     rub = "рубль";
                     break;
@@ -60,6 +52,9 @@ public class Main {
                 case "3":
                 case "4":
                     rub = "рубля";
+                    break;
+                default:
+                    rub = "рублей";
                     break;
             }
         }
