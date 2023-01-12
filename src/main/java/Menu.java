@@ -20,7 +20,7 @@ public class Menu {
                 if (scan.hasNextDouble()) {
                     price = scan.nextDouble();
                     scan.nextLine();
-                    if (price < 0) {
+                    if (price <= 0) {
                         System.out.println("Введите число > 0.");
                     } else {
                         amount += price;

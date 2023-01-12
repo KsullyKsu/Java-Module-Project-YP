@@ -32,30 +32,17 @@ public class Main {
 
         int z = ((int) bill) % 100;
         if (z >= 11 && z <= 14) {
-            rub = String.format("%d", z);
-            switch (rub) {
-                case "11":
-                case "12":
-                case "13":
-                case "14":
-                    rub = "рублей";
-                    break;
-            }
-        } else{
-            z = ((int) bill) % 10;
-            rub = String.format("%d", z);
-            switch (rub) {
-                case "1":
-                    rub = "рубль";
-                    break;
-                case "2":
-                case "3":
-                case "4":
+            rub = "рублей";
+        } else {
+            int x = z % 10;
+            if (x == 1) {
+                rub = "рубль";
+            } else {
+                if (x >= 2 && x <= 4) {
                     rub = "рубля";
-                    break;
-                default:
+                } else {
                     rub = "рублей";
-                    break;
+                }
             }
         }
         System.out.format("\nИтого по %.2f " + rub + " на каждого из " + friend + " гостей.", bill);
